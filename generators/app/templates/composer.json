@@ -1,0 +1,46 @@
+{
+    "name": "<%= packageName %>",
+    "type": "library",
+    "description": "<%= packageDescription %>",
+    "homepage": "https://github.com/<%= packageName %>",
+    "license": "MIT",
+    "keywords": [
+        "laravel"
+    ],
+    "support": {
+        "issues": "https://github.com/<%= packageName %>/issues",
+        "source": "https://github.com/<%= packageName %>"
+    },
+    "authors": [
+        {
+            "name": "<%= authorName %>",
+            "email": "<%= authorEmail %>"
+        }
+    ],
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.2.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.15",
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.3",
+        "squizlabs/php_codesniffer": "^3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "<%= autoloadNamespace %>\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "<%= autoloadNamespace %>\\Tests\\": "tests/"
+        }
+    }
+}

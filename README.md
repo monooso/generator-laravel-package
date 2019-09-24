@@ -26,7 +26,7 @@ Install [Yeoman](https://yeoman.io) and this package using [npm](https://npmjs.c
 
 ```
 npm install -g yo
-npm install -g generator-laravel-package
+npm install -g @monooso/generator-laravel-package
 ```
 
 ## Usage

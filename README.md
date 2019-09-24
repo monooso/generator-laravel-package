@@ -1,7 +1,7 @@
 # Laravel package generator
 
 [![Build Status](https://img.shields.io/travis/monooso/generator-laravel-package.svg)](https://travis-ci.org/monooso/generator-laravel-package)
-[![NPM Version](https://img.shields.io/npm/v/@monooso/generator-laravel-package.svg)](https://www.npmjs.org/@monooso/generator-laravel-package)
+[![NPM Version](https://img.shields.io/npm/v/@monooso/generator-laravel-package.svg)](https://www.npmjs.org/package/@monooso/generator-laravel-package)
 
 ## Overview
 Yeoman generator for scaffolding a Laravel package. Generates the following files, based on the information you provide:

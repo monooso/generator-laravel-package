@@ -1,0 +1,16 @@
+{
+  "name": "generator-laravel-package",
+  "version": "0.1.0",
+  "description": "Generate a Laravel package",
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "laravel",
+    "php",
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^4.0.2"
+  }
+}

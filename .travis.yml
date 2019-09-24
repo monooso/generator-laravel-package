@@ -1,0 +1,17 @@
+language: node_js
+notifications:
+  email: false
+node_js:
+  - "8"
+  - "9"
+  - "10"
+  - "11"
+sudo: false
+before_script:
+  - npm install -g yo
+cache:
+  directories:
+    - node_modules
+    - $(npm config get prefix)/bin/yo
+script:
+  - npm run test

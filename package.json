@@ -1,6 +1,6 @@
 {
   "name": "@monooso/generator-laravel-package",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Yeoman generator for scaffolding a Laravel package",
   "license": "MIT",
   "homepage": "https://github.com/monooso/generator-laravel-package",
@@ -22,15 +22,15 @@
     "test": "mocha --recursive"
   },
   "dependencies": {
-    "js-headercase": "^1.2.1",
-    "js-pascalcase": "^1.2.1",
-    "yeoman-generator": "^4.0.2"
+    "generator-license": "^5.4.0",
+    "js-convert-case": "^4.1.0",
+    "yeoman-generator": "^4.12.0"
   },
   "devDependencies": {
-    "mocha": "^6.2.0",
-    "standard": "^14.3.1",
+    "mocha": "^8.1.3",
+    "standard": "^14.3.4",
     "yeoman-assert": "^3.1.1",
-    "yeoman-test": "^2.0.0"
+    "yeoman-test": "^3.0.0"
   },
   "standard": {
     "enable": true,

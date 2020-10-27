@@ -52,9 +52,10 @@ describe('laravel-package:app', async function () {
 
   it('creates LICENSE.txt', async function () {
     const filename = 'LICENSE.txt'
+    const year = new Date().getUTCFullYear()
 
     assert.file(filename)
-    assert.fileContent(filename, 'Copyright (c) 2019 John Doe')
+    assert.fileContent(filename, `Copyright (c) ${year} John Doe`)
   })
 
   it('creates README.md', async function () {

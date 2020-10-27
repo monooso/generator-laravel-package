@@ -1,6 +1,5 @@
 const Generator = require('yeoman-generator')
-const toHeader = require('js-headercase')
-const toPascal = require('js-pascalcase')
+const { toHeaderCase, toPascalCase } = require('js-convert-case')
 
 const staticTemplates = [
   '.editorconfig',
@@ -56,38 +55,37 @@ module.exports = class extends Generator {
   }
 
   _copyFiles () {
-    staticTemplates.forEach(f => this.fs.copy(
-      this.templatePath(f),
-      this.destinationPath(f)
-    ))
+    staticTemplates.forEach((f) =>
+      this.fs.copy(this.templatePath(f), this.destinationPath(f))
+    )
   }
 
   _copyTemplates () {
     const context = this._templateContext()
 
-    dynamicTemplates.forEach(f => this.fs.copyTpl(
-      this.templatePath(f),
-      this.destinationPath(f),
-      context
-    ))
+    dynamicTemplates.forEach((f) =>
+      this.fs.copyTpl(this.templatePath(f), this.destinationPath(f), context)
+    )
   }
 
   _templateContext () {
     const autoloadNamespace = this.answers.packageName
       .split('/')
-      .map(segment => toPascal(segment))
+      .map((segment) => toPascalCase(segment))
       .join('\\\\')
 
-    const title = toHeader(this.answers.packageName.split('/')[1])
+    const now = new Date()
+    const title = toHeaderCase(this.answers.packageName.split('/')[1])
 
     return {
       autoloadNamespace,
       title,
-      dateStamp: new Date().toISOString().split('T')[0],
+      dateStamp: now.toISOString().split('T')[0],
       authorName: this.answers.authorName,
       authorEmail: this.answers.authorEmail,
       packageName: this.answers.packageName,
-      packageDescription: this.answers.packageDescription
+      packageDescription: this.answers.packageDescription,
+      fullYear: now.getUTCFullYear()
     }
   }
 }

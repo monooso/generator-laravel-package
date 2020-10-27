@@ -74,16 +74,18 @@ module.exports = class extends Generator {
       .map((segment) => toPascalCase(segment))
       .join('\\\\')
 
+    const now = new Date()
     const title = toHeaderCase(this.answers.packageName.split('/')[1])
 
     return {
       autoloadNamespace,
       title,
-      dateStamp: new Date().toISOString().split('T')[0],
+      dateStamp: now.toISOString().split('T')[0],
       authorName: this.answers.authorName,
       authorEmail: this.answers.authorEmail,
       packageName: this.answers.packageName,
-      packageDescription: this.answers.packageDescription
+      packageDescription: this.answers.packageDescription,
+      fullYear: now.getUTCFullYear()
     }
   }
 }

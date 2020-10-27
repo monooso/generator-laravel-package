@@ -1,6 +1,6 @@
 {
   "name": "@monooso/generator-laravel-package",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Yeoman generator for scaffolding a Laravel package",
   "license": "MIT",
   "homepage": "https://github.com/monooso/generator-laravel-package",
